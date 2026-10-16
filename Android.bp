@@ -36,8 +36,6 @@ cc_prebuilt_library {
     },
     prefer: true,
     visibility: [
-        "//external/webrtc:__subpackages__",
-        "//device/google/cuttlefish/host/frontend/webrtc:__subpackages__",
         "//visibility:public",
     ],
     apex_available: [
