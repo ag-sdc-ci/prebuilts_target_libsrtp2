@@ -38,8 +38,7 @@ cc_prebuilt_library {
     visibility: [
         "//external/webrtc:__subpackages__",
         "//device/google/cuttlefish/host/frontend/webrtc:__subpackages__",
-        "//apex_available:platform",
-        "//apex_available:anyapex",
+        "//visibility:public",
     ],
     apex_available: [
         "//apex_available:platform",
