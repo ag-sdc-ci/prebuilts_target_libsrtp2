@@ -1,0 +1,48 @@
+// Auto-generated prebuilt Blueprint for external/libsrtp2
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.libsrtp2
+
+package {
+    default_applicable_licenses: ["external_libsrtp2_license"],
+}
+
+license {
+    name: "external_libsrtp2_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-BSD",
+        "SPDX-license-identifier-MIT",
+        "legacy_unencumbered",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+cc_prebuilt_library {
+    name: "libsrtp2",
+    host_supported: true,
+    vendor: true,
+    check_elf_files: false,
+    export_include_dirs: [
+        "include",
+        "crypto/include",
+        "exported_include",
+    ],
+    static: {
+        srcs: ["lib/libsrtp2.a"],
+    },
+    shared: {
+        srcs: ["lib/libsrtp2.so"],
+    },
+    prefer: true,
+    visibility: [
+        "//external/webrtc:__subpackages__",
+        "//device/google/cuttlefish/host/frontend/webrtc:__subpackages__",
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
