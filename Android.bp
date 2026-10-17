@@ -25,8 +25,6 @@ cc_prebuilt_library {
     check_elf_files: false,
     export_include_dirs: [
         "include",
-        "crypto/include",
-        "exported_include",
     ],
     static: {
         srcs: ["lib/libsrtp2.a"],
